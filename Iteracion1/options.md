@@ -1,11 +1,10 @@
-# 0001-Selección_Estilo_Arquitectura
-* parent: Opciones
-* title: Elección arquitectura
-* status: proposed
-* date: 2024-11-01
-* decision-makers: Alejandro Rico, Daniel Rong
-* consulted: Elena Ceinos, Gaizka Aranbarri
-* informed: Jon Mazcuñán, Alberto Acebes, Pablo Villamayor
+# 0001-Elección_Arquitectura
+* Parent: Opciones
+* Status: proposed
+* Date: 2024-11-01
+* Decision-Makers: Alejandro Rico, Daniel Rong
+* Consulted: Elena Ceinos, Gaizka Aranbarri
+* Informed: Jon Mazcuñán, Alberto Acebes, Pablo Villamayor
 
 
 
