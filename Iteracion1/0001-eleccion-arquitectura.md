@@ -1,4 +1,4 @@
-# 0001-Elección_Arquitectura
+# Elección de la arquitectura
 * Parent: Opciones
 * Status: proposed
 * Date: 2024-11-01
