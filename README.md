@@ -7,7 +7,7 @@
 | **Daniel Rong Chen**            |                                                     | Arquitecto Software Senior    |
 | **Alberto Acebes Sánchez**      |  [alberr22](https://github.com/alberr22)            | Arquitecto Software Junior    |
 | **Jon Mazcuñán Hernández**      | [jonmazh](https://github.com/jonmazh)               | Arquitecto Software Junior    |
-| **Gaizka Aranbarri Berasaluze** |                                                     | Arquitecto Software Cognitivo |
+| **Gaizka Aranbarri Berasaluze** | [GaizkaURJC](https://github.com/GaizkaURJC)         | Arquitecto Software Cognitivo |
 | **Elena Ceinos Abeijón**        |                                                     | Arquitecto Software Cognitivo |
 
 ---
