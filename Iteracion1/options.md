@@ -1,4 +1,4 @@
-## 0001-Selección_Estilo_Arquitectura
+# 0001-Selección_Estilo_Arquitectura
 * parent: Opciones
 * title: Elección arquitectura
 * status: proposed
