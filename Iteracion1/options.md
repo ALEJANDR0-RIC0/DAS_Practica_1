@@ -1,10 +1,10 @@
-parent: Opciones
-title: Elección arquitectura
-status: proposed
-date: 2024-11-01
-decision-makers: Alejandro Rico, Daniel Rong
-consulted: Elena Ceinos, Gaizca Aranbarri
-informed: Jon Mazcuñán, Alberto Acebes, Pablo Villamayor
+* parent: Opciones
+* title: Elección arquitectura
+* status: proposed
+* date: 2024-11-01
+* decision-makers: Alejandro Rico, Daniel Rong
+* consulted: Elena Ceinos, Gaizka Aranbarri
+* informed: Jon Mazcuñán, Alberto Acebes, Pablo Villamayor
 
 
 
