@@ -24,28 +24,27 @@ La empresa de productos alimenticios quiere cambiar su sistema monolítico a una
 
 ## Considered Options
 
-* 0001-1-Arquitectura Monolítica
-* 0001-2-Arquitectura por Capas
-* 0001-3-Arquitectura de Servicios 
+* 0001-1-Arquitectura por Capas
+* 0001-2-Arquitectura de Servicios 
 
 
 ## Pros and Cons of the Options
 
-### 0001-1-Arquitectura Monolítica
+### 0001-1-Arquitectura Monolítica!!!
 
 * Good, because es simple de implementar y gestionar inicialmente.
 * Good, porque facilita la comprensión y despliegue del sistema en un solo entorno.
 * Bad, because tiene un alto acoplamiento, lo que complica la escalabilidad y la flexibilidad para hacer cambios.
 * Bad, porque un fallo en un componente puede afectar a todo el sistema.
 
-### 0001-2-Arquitectura por Capas
+### 0001-1-Arquitectura por Capas
 
 * Good, because separa la lógica de presentación, negocio y datos, facilitando la organización del código.
 * Good, porque mejora la estructuración y permite una evolución más ordenada del sistema.
 * Bad, because las capas están acopladas, lo que puede complicar la escalabilidad independiente.
 * Bad, porque un fallo en una capa crítica puede impactar todo el sistema.
 
-### 0001-3-Arquitectura de Servicios 
+### 0001-2-Arquitectura de Servicios 
 
 * Good, porque permite el desacoplamiento de servicios y la integración con nuevas tecnologías.
 * Good, porque ofrece reutilización de servicios y mayor flexibilidad en el desarrollo.
@@ -55,7 +54,7 @@ La empresa de productos alimenticios quiere cambiar su sistema monolítico a una
 
 ## Decision Outcome
 
-Chosen option: "0001-3-Arquitectura de Servicios"
+Chosen option: "0001-2-Arquitectura de Servicios"
 
 ### Positive Consequences
 
