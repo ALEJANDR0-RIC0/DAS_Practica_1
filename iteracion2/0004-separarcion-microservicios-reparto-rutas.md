@@ -1,6 +1,6 @@
 # Separación de microservicios de reparto y rutas
 * Parent: Opciones
-* Status: proposed
+* Status: accepted
 * Date: 2024-11-06
 * Decision-Makers: Alejandro Rico, Daniel Rong
 * Consulted: Elena Ceinos, Gaizka Aranbarri
