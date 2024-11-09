@@ -2,7 +2,7 @@
 
 # Elección de la arquitectura de base de datos
 * Parent: Opciones
-* Status: proposed
+* Status: Accepted
 * Date: 2024-11-07
 * Decision-Makers: Alejandro Rico, Daniel Rong
 * Consulted: Elena Ceinos, Gaizka Aranbarri

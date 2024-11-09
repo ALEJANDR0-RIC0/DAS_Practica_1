@@ -1,6 +1,6 @@
 # Cambio en el diseño UML propuesto en la iteración anterior
 * Parent: Opciones
-* Status: proposed
+* Status: accepted
 * Date: 2024-11-06
 * Decision-Makers: Alejandro Rico, Daniel Rong
 * Consulted: Elena Ceinos, Gaizka Aranbarri
