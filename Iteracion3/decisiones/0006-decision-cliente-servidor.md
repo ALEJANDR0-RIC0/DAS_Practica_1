@@ -1,7 +1,6 @@
 # 0006-Utilización-Cliente-Servidor
 
 # Elección de arquiterctura de cliente-servidor
-* Parent: Opciones
 * Status: Proposed
 * Date: 2024-11-12
 * Decision-Makers: Alejandro Rico, Daniel Rong
