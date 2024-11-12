@@ -14,9 +14,9 @@ El módulo de incidencias debe reportar eventos críticos, como averías de cami
 
 ## Decision Drivers
 
-* Necesidad de una implementación rápida para no retrasar el despliegue del módulo de incidencias.  
-* Fiabilidad y escalabilidad garantizadas mediante el uso de soluciones probadas.  
-* Costos operativos aceptables frente a los costos y tiempos de desarrollo de una solución propia.  
+* RF-17: Reportar incidencias
+* RF-18: Notificar incidencias
+* RF-19: Consultar notificaciones
 
 ## Considered Options
 
