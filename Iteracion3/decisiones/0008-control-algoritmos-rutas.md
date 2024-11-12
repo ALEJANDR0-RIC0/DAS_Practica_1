@@ -1,6 +1,6 @@
 # 0008-control-algortimos-rutas
 
-# DElección de como se van a controlar los algoritmos de rutas
+# Elección de como se van a controlar los algoritmos de rutas
 
 * Status: Proposed
 * Date: 2024-11-12
