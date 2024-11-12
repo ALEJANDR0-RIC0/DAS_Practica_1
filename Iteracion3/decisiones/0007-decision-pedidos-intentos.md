@@ -14,8 +14,8 @@
 
 ## Considered Options
 
-* **0007-1-utilizar-patron-retry**
-* **0007-2-utilizar-patron-retry-con-circuit-breaker**
+* 0007-1-utilizar-patron-retry
+* 0007-2-utilizar-patron-retry-con-circuit-breaker
 
 ## Decision Outcome
 
@@ -24,7 +24,7 @@ Chosen option:
 
 ### Consequences
 
-* Good, because el patrón retry permite lcontrolar el numero de intentos fallidos.
+* Good, porque el patrón retry permite lcontrolar el numero de intentos fallidos.
 * Good, porque Circuit Breaker asegura que los reintentos se interrumpan en caso de fallos críticos, evitando la sobrecarga del sistema y permitiendo que los recursos se restablezcan antes de procesar nuevos intentos.
 
 * Bad, por la complejidad de la implementacion.
