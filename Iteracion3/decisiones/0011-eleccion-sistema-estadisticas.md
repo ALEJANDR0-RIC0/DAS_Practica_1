@@ -1,6 +1,6 @@
 # 0011-Elección-patrón-Estadísticas
 
-# Elección de patrón para el módulo de Estadísticas del sistema
+# Elección de patrón Circuit Braker para conectar los módulos de Pedidos y Pagos del sistema
 
 * **Status**: Accepted
 * **Date**: 2024-11-13
@@ -10,48 +10,47 @@
 
 ## Context and Problem statement
 
-* El sistema cuenta con un módulo de estadísticas, el cual debe proporcionar información sobre el estado de los pedidos, situación en tiempo real de los camiones e información valiosa de los clientes.
+* El módulo de Pedidos interactuá con el módulo de Pagos, que usa una pasarela externa (Stripe), para llevar a cabo las transacciones. En caso de que el servicio de Pagos esté inactivo o no disponible, las llamadas fallidas pueden afectar negativamente el rendimiento general del sistema. Por lo que es necesario implementar un mecanismo que maneje los fallos en caso de que se colapse el módulo de Pagos, y así evitar sobrecargar el sistema con llamadas.
 
 ## Drivers de Decisión
 
-* RF-14: Mostrar estadísticas de pedidos
-* RF-15: Mostrar estadísticas de la logística
-* RF-16: Mostrar estadísticas de los clientes
+* RF-5: Realizar pedidos
+* RF-20: Pagar
 
 ## Considered Options
 
-* 0011-1-Patrón CQRS (Command Query Responsibility Segregation)
-* 0011-2-Patrón de Vista Materializada
+* 0011-1-Patrón Circuit Breaker
+* 0011-2-No implementar ningún patrón de diseño y manejar los fallos con reintentos automáticos
 
 ## Pros and Cons of the Options
 
-### 0011-1-Patrón CQRS (Command Query Responsibility Segregation)
+### 0011-1-Patrón Circuit Breaker
 
-* Good, porque separa las operaciones de lectura y escritura, lo que permite que las consultas estadísticamente pesadas no afecten el rendimiento de las operaciones de escritura. 
-* Good, porque permite optimización independiente para operaciones de consulta, lo que es ideal para lograr la visualización de los datos en tiempo ideal.
+* Good, porque permite proteger al sistema cuando ocurren fallos prolongados en el módulo de Pagos al evitar llamadas repetidas al servicio inactivo.
+* Good, porque permite que el sistema se recupere y establezca nuevamente de manera correcta.
 
-* Bad, porque añade complejidad al sistema, ya que se implementan 2 modelos separados para escritura y lectura.
-* Bad, porque puede requerir modelos complejos de sincronización entre ambos modelos, aumentando así los esfuerzos para el mantenimiento.
+* Bad, porque añade complejidad al sistema debido a la configuración y gestión de los estados del Circuit Breaker (abierto, medio abierto, cerrado).
+* Bad, porque requiere configurar de manera correcta los tiempos de espera para evitar que el patrón sea demasiado restrictivo o demasiado permisivo.
 
-### 0011-2-Patrón de Vista Materializada
+### 0011-2-No implementar ningún patrón de diseño y manejar los fallos con reintentos automáticos
 
-* Good, porque proporciona consultas rápidas al mantener una copia optimizada de los datos.
-* Good, porque más simple de implementar que CQRS y no requiere de una separación explícita de modelos de lectura y escritura.
+* Good, porque es una implementación simple, ya que consiste en reintentar llamadas fallidas después de un tiempo.
+* Good, porque no requiere un estado o una lógica de gestión de circuitos.
 
-* Bad, porque las vistas materializadas deben mantenerse constantemente actualizadas y de manera inmediata, sino puede generar cierta latencia en los datos.
-* Bad, porque no es tan flexible para manejar consultas complejas, en especial si los datos cambian constantemente como es el caso.
+* Bad, porque puede sobrecargar el módulo de Pedidos con llamadas repetidas si el servicio de Pagos aún no responde, causando latencia en el redimiento.
+* Bad, porque no proporciona una protección efectiva contra fallos prolongados o repetidos, lo que puede generar una mala experiencia para el usuario.
 
 ## Decision outcome
 
-* **Chosen option**: 0011-1-Patrón CQRS (Command Query Responsibility Segregation)
-Se integrará el patrón CQRS para el módulo de Estadísticas del sistema para garantizar la eficiencia a la hora de mostrar en tiempo real la información de los pedidos, situación de los camiones e información de los clientes.
+* **Chosen option**: 0011-1-Patrón Circuit Breaker
+Se integrará el patrón Circuit Breaker entre los módulos Pedidos y Pagos del sistema para garantizar un manejo óptimo del sistema y evitar sobrecargarlo en caso de que el servicio de pagos tenga fallas. 
 
 ### Positive Consequences
 
-* Mejor rendimiento para consultas de estádisíticas complejas debido a la separación de modelos de lectura y escritura.
-* Mayor flexibilidad a la hora de optimizar consultas de estadísticas sin afectar el flujo de transacciones.
+* Mejora la resiliencia y la estabilidad del módulo de Pedidos al manejar fallos en el módulo de Pagos de manera controlada.
+* Evita la sobrecarga del sistema causada por llamadas repetidas a un servicio que no está disponible.
 
 ### Negative Consequences
 
-* Mayor complejidad en la sincronización entre ambos modelos de comando y consulta.
-* Esfuerzo adicional de diseño y manteminimiento.
+* Requiere una configuración y gestión adecuada para garantizar su correcto funcionamiento.
+* Aumenta la complejidad del sistema en términos de monitoreo y gestión.
