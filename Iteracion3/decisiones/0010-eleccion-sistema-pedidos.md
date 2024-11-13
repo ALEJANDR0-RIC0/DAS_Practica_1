@@ -1,4 +1,4 @@
-# 0009 - Elección de Patrón para el Sistema de Pedidos en Tres Fases (Preprocesado, Autorización y Aceptación)
+# 0010 - Elección de Patrón para el Sistema de Pedidos en Tres Fases (Preprocesado, Autorización y Aceptación)
 
 * **Status**: Accepted
 * **Date**: 2024-11-07
