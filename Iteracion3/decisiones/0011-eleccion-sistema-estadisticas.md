@@ -1,4 +1,6 @@
-# 0011 - Elección de patrón para el módulo de Estadísticas del sistema
+# 0011-Elección-patrón-Estadísticas
+
+# Elección de patrón para el módulo de Estadísticas del sistema
 
 * **Status**: Accepted
 * **Date**: 2024-11-13

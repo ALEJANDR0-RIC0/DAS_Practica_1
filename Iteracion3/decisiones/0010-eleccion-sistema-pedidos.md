@@ -1,4 +1,6 @@
-# 0010 - Elección de Patrón para el Sistema de Pedidos en Tres Fases (Preprocesado, Autorización y Aceptación)
+# 0010 - Elección-Patrón-Pedidos-Tres-Fases
+
+# Elección de Patrón para el Sistema de Pedidos en Tres Fases (Preprocesado, Autorización y Aceptación)
 
 * **Status**: Accepted
 * **Date**: 2024-11-07
@@ -42,8 +44,6 @@
 ## Decision outcome
 
 Chosen option: "0010-2-Utilizar el patrón Event sourcing"
-
-**Opción elegida: Chain of Responsibility**, ya que permite un flujo de procesamiento claro y secuencial de cada fase del pedido (preprocesado, autorización, aceptación), asegurando un desacoplamiento modular y facilitando la adición de nuevas fases sin complejidad adicional en el registro de eventos. Chain of Responsibility se alinea mejor con el requerimiento de un procesamiento secuencial y modular, mientras que Event Sourcing introduce una complejidad innecesaria en este caso.
 
 ## Consecuencias
 
