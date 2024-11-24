@@ -52,7 +52,7 @@ Para el módulo de incidencias, es crucial seleccionar una API de mensajería qu
 
 ## Decision Outcome
 
-* **Chosen option**: "0012-3-Telegram"  
+* **Chosen option**: "0012-2-Twilio"  
 Se ha decidido utilizar Twilio para las notificaciones SMS debido a su fiabilidad, escalabilidad, facilidad de integración y la gran flexibilidad para añadir más funcionalidades. Aunque introduce un costo recurrente, se considera que los beneficios superan los inconvenientes.
 
 ### Positive Consequences
